@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+
+  list-style: none;
+
+  li {
+
+    a{
+      margin-right: 53px;
+
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+
+  }
+}

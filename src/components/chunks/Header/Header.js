@@ -1,7 +1,8 @@
 import React from "react";
-import Logo from "./Logo";
-import DropdownMenu from "./DropdownMenu";
-import Navigation from "./Navigation";
+import Logo from "../Logo/Logo";
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import Navigation from "../Navigation/Navigation";
+import './Header.scss';
 
 class Header extends React.Component {
 
@@ -28,7 +29,7 @@ class Header extends React.Component {
         return (
             <div className="header">
                 <div className="header-left">
-                    <Logo className="logo" logoWidth="243" logoHeight="56"/>
+                    <Logo className="logo" logoWidth="219" logoHeight="50"/>
                 </div>
 
                 <div className="header-right">
@@ -39,12 +40,10 @@ class Header extends React.Component {
                             this.state.status ? <DropdownMenu/> : null
                         }
                     </div>
-                </div>
-
-                <div className="dropdown">
-                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    </a>
-                    <DropdownMenu/>
+                    <div className="dropdown">
+                        <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        </a>
+                    </div>
                 </div>
             </div>
         );

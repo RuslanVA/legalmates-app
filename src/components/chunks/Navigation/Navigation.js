@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './Navigation.scss';
 
 const Navigation = (props) => (
     <ul className={"nav" + (props.className ? ' ' + props.className : '')}>

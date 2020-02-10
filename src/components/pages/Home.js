@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import Header from "../chunks/Header/Header";
 
 
 class HomePage extends Component {
@@ -13,6 +14,7 @@ class HomePage extends Component {
     render(){
         return (
             <Fragment>
+                <Header/>
                 <p>Legal Mates</p>
             </Fragment>
         );

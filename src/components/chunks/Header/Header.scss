@@ -1,0 +1,16 @@
+.header {
+  height: 93px;
+  position: sticky;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #0D2834;
+
+  .logo {
+    margin-left: 60px;
+  }
+
+
+}
