@@ -1,10 +1,10 @@
-import React from "react";
+import React, {Component} from "react";
 import Logo from "../Logo/Logo";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import Navigation from "../Navigation/Navigation";
 import './Header.scss';
 
-class Header extends React.Component {
+class Header extends Component {
 
     state = {
         status: false
