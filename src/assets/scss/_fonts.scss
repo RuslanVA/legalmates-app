@@ -1,0 +1,42 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Work Sans Regular";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/work-sans-regular.woff2") format("woff2"),
+  url("../fonts/work-sans-regular.woff") format("woff"),
+  url("../fonts/work-sans-regular.ttf") format("ttf"),
+  url("../fonts/work-sans-regular.eot") format("eot");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Work Sans Bold";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/work-sans-bold.woff2") format("woff2"),
+  url("../fonts/work-sans-bold.woff") format("woff"),
+  url("../fonts/work-sans-bold.ttf") format("ttf"),
+  url("../fonts/work-sans-bold.eot") format("eot");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Work Sans Semibold";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/work-sans-semibold.woff2") format("woff2"),
+  url("../fonts/work-sans-semibold.woff") format("woff"),
+  url("../fonts/work-sans-semibold.ttf") format("ttf"),
+  url("../fonts/work-sans-semibold.eot") format("eot");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Neris Semibold";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Neris-SemiBold.woff") format("woff"),
+  url("../fonts/Neris-SemiBold.ttf") format("ttf"),
+  url("../fonts/Neris-SemiBold.eot") format("eot");
+}

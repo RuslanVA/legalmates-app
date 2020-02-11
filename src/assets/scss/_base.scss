@@ -1,0 +1,143 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  color: $dark-blue;
+  font-style: normal;
+  font-family: "Work Sans Semibold", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, a, p, img {
+  @include zero-indents;
+}
+
+h1, h2, h3, h4, a, p, label, button, span {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a:focus {
+  outline: none;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Work Sans Semibold", sans-serif;
+  line-height: 115%;
+}
+
+h1 {
+  font-family: "Work Sans Bold", sans-serif;
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4, h5 {
+  font-size: 20px;
+}
+
+label {
+  font-family: "Work Sans Semibold", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 155%;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Work Sans Semibold", sans-serif;
+  color: $dark-blue;
+}
+
+p {
+  font-family: "Work Sans Regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 195%;
+  letter-spacing: -0.03em;
+}
+
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+input {
+  @include zero-indents;
+  border: none;
+  outline: none;
+}
+
+input[type="submit"] {
+  @include zero-indents;
+  border: none;
+  outline: none;
+}
+
+input::-ms-input-placeholder{
+  color: $grey;
+  font-family: "Work Sans Regular", sans-serif;
+  font-size: 19px;
+  line-height: 195%;
+}
+input::-webkit-input-placeholder{
+  color: $grey;
+  font-family: "Work Sans Regular", sans-serif;
+  font-size: 19px;
+  line-height: 195%;
+}
+input::-moz-placeholder{
+  color: $grey;
+  font-family: "Work Sans Regular", sans-serif;
+  font-size: 19px;
+  line-height: 195%;
+}
+input::placeholder{
+  color: $grey;
+  font-family: "Work Sans Regular", sans-serif;
+  font-size: 19px;
+  line-height: 195%;
+}
+
+button {
+  font-family: "Work Sans Semibold", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 155%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  @include zero-indents;
+}
