@@ -29,7 +29,7 @@ class Header extends Component {
         return (
             <div className="header">
                 <div className="header-left">
-                    <Logo className="logo" logoWidth="219" logoHeight="50"/>
+                    <Logo logoWidth="219" logoHeight="50"/>
                 </div>
 
                 <div className="header-right">
