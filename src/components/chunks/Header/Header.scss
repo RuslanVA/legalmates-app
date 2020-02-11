@@ -1,3 +1,5 @@
+@import "../../../assets/scss/style.scss";
+
 .header {
   height: 93px;
   position: sticky;
@@ -6,11 +8,10 @@
   justify-content: space-between;
   align-items: center;
 
-  background: #0D2834;
+  background-color: $dark-blue;
 
   .logo {
     margin-left: 60px;
   }
-
 
 }

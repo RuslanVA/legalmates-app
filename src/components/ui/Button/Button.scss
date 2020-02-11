@@ -1,0 +1,24 @@
+@import "../../../assets/scss/style.scss";
+
+.btn {
+  width: 178px;
+  height: 50px;
+
+  background-color: $gold;
+  border-radius: 3px;
+
+  color: $white;
+
+  @include secondary-text1;
+  @include flex-center;
+
+  span {
+    margin-left: -9px;
+  }
+
+  span:after {
+    content: ">";
+    color: $white;
+    padding-left: 18px;
+  }
+}
