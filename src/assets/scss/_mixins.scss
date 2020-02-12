@@ -16,6 +16,12 @@
   align-items: center;
 }
 
+@mixin flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin secondary-text1 {
   font-family: "Work Sans Semibold", sans-serif;
   font-style: normal;

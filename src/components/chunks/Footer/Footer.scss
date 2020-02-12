@@ -5,4 +5,53 @@
   width: 100%;
 
   color: $white;
+
+  .contact-us {
+    display: flex;
+    padding-top: 79px;
+
+    .contact-info {
+      width: 50%;
+      margin-left: 360px;
+
+      .uppercase {
+        @include uppercase;
+        color: #A8AABB;
+      }
+
+      .title {
+        margin-top: 30px;
+      }
+
+      .text {
+        margin-top: 20px;
+        max-width: 66%;
+
+        color: #BCC1CE;
+      }
+    }
+
+    .contact-form {
+      width: 50%;
+      margin-right: 360px;
+
+      background-color: blue;
+    }
+  }
+
+  .copyright {
+    height: 63px;
+    margin: 56px 360px 0;
+
+    @include flex-space;
+
+    border-top: 1px solid #C4C4C4;
+
+    p {
+      color: $white;
+      opacity: 0.4;
+
+      @include secondary-text3;
+    }
+  }
 }
