@@ -1,0 +1,30 @@
+@import "../../assets/scss/style.scss";
+
+.sign-up {
+  position: relative;
+  margin-top: 93px;
+
+  img {
+    width: 100%;
+  }
+
+}
+
+.sign-up-info {
+  position: absolute;
+  top: 136px;
+  left: 360px;
+
+  max-width: 510px;
+
+  color: $white;
+
+  p {
+    margin-top: 10px;
+    opacity: 0.7;
+  }
+
+  .btn {
+    margin-top: 30px;
+  }
+}
