@@ -1,0 +1,49 @@
+@import "../../../assets/scss/style.scss";
+
+.steps-item {
+
+  padding-top: 30px;
+  border-left: 4px solid rgba(29, 66, 84, 0.1);
+  cursor: pointer;
+
+  h4 {
+    padding-left: 40px;
+
+    color: $light-grey;
+
+  }
+
+  h3 {
+    padding: 5px 0 10px 40px;
+    color: $grey;
+  }
+
+  p {
+    display: none;
+  }
+
+  &.active {
+
+    padding-top: 30px;
+    border-left: 4px solid $gold;
+
+    h4 {
+      color: $grey;
+    }
+
+    h3 {
+      color: $dark-blue;
+    }
+
+    p {
+      display: block;
+      padding: 8px 0 5px 40px;
+      opacity: 0.7;
+      @include secondary-text1;
+    }
+  }
+
+  &:first-of-type {
+    padding-top: 10px;
+  }
+}

@@ -87,6 +87,10 @@ p {
   letter-spacing: -0.03em;
 }
 
+ul {
+  @include zero-list;
+}
+
 input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;

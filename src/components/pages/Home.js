@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import Header from "../chunks/Header/Header";
 import MainSlide from "../MainSlide/MainSlide";
+import HowItWorks from "../HowItWorks/HowItWorks";
 import Footer from "../chunks/Footer/Footer";
 
 
@@ -18,7 +19,7 @@ class HomePage extends Component {
             <Fragment>
                 <Header/>
                 <MainSlide/>
-                <p>Legal Mates</p>
+                <HowItWorks/>
                 <Footer/>
             </Fragment>
         );

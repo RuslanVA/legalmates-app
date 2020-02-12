@@ -1,0 +1,55 @@
+@import "../../assets/scss/style.scss";
+
+.how-it-works {
+  margin-top: 62px;
+
+  h2 span {
+    color: $gold;
+  }
+
+  .how-post {
+    position: relative;
+    min-height: 583px;
+    margin-top: 169px;
+    margin-left: 360px;
+
+    .steps {
+      max-width: 495px;
+      margin-top: 30px;
+    }
+
+    img {
+      position: absolute;
+      top: -107px;
+      right: 314px;
+    }
+  }
+
+  .how-search {
+    position: relative;
+    min-height: 558px;
+    margin-top: 265px;
+
+    h2 {
+      margin-left: 50%;
+      position: relative;
+      z-index: 10;
+    }
+
+    .steps {
+      max-width: 580px;
+      margin-top: 30px;
+      margin-left: 50%;
+      position: relative;
+      z-index: 10;
+    }
+
+    img {
+      position: absolute;
+      top: -122px;
+      left: 0;
+    }
+
+  }
+
+}
