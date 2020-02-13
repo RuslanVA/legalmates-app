@@ -1,11 +1,33 @@
 @import "../../assets/scss/style";
 
 .faq {
-  padding: 116px 360px 110px;
+  padding: 116px $main-padding 110px;
 
   h2 {
     margin-bottom: 59px;
     text-align: center;
+  }
+
+}
+
+@media screen and (max-width: $desktop-width){
+
+  .faq {
+    padding: 116px 10% 110px;
+  }
+
+}
+
+@media screen and (max-width: $small-laptop-width){
+
+  .faq {
+    padding: 60px 10% 60px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+
   }
 
 }

@@ -11,17 +11,18 @@
     position: relative;
     min-height: 583px;
     margin-top: 169px;
-    margin-left: 360px;
+    margin-left: $main-padding;
 
     .steps {
-      max-width: 495px;
+      max-width: 32%;
       margin-top: 30px;
     }
 
     img {
       position: absolute;
-      top: -107px;
-      right: 314px;
+      top: -60px;
+      right: 20%;
+      max-width: 43%;
     }
   }
 
@@ -37,7 +38,7 @@
     }
 
     .steps {
-      max-width: 580px;
+      max-width: 30%;
       margin-top: 30px;
       margin-left: 50%;
       position: relative;
@@ -48,8 +49,80 @@
       position: absolute;
       top: -122px;
       left: 0;
+
+      max-width: 54%;
+
+      @media screen and (max-width: 1900px){
+        max-width: 50%;
+      }
     }
 
+  }
+
+}
+
+@media screen and (max-width: $desktop-width){
+
+  .how-it-works {
+    margin-top: 30px;
+
+    .how-post {
+      min-height: 583px;
+      margin-top: 120px;
+      margin-left: 10%;
+
+      .steps {
+        max-width: 40%;
+      }
+
+      img {
+        top: -60px;
+        right: 10%;
+      }
+    }
+
+    .how-search {
+      min-height: 558px;
+      margin-top: 120px;
+
+      h2 {
+        margin-left: 50%;
+      }
+
+      .steps {
+        max-width: 30%;
+        margin-top: 30px;
+        margin-left: 50%;
+      }
+
+      img {
+        top: 0;
+        left: 0;
+
+        max-width: 50%;
+      }
+
+    }
+
+  }
+}
+
+@media screen and (max-width: $small-laptop-width){
+
+  .how-it-works {
+
+    .how-post {
+      margin-top: 60px;
+
+      img {
+        top: 0;
+      }
+    }
+
+    .how-search {
+      margin-top: 10px;
+
+    }
   }
 
 }

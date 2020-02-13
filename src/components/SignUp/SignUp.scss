@@ -12,8 +12,8 @@
 
 .sign-up-info {
   position: absolute;
-  top: 136px;
-  left: 360px;
+  top: 30.22%;
+  left: $main-padding;
 
   max-width: 510px;
 
@@ -26,5 +26,18 @@
 
   .btn {
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: $desktop-width){
+  .sign-up-info {
+    top: 20%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: $small-laptop-width){
+  .sign-up {
+    margin-top: 0;
   }
 }

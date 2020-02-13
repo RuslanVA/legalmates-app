@@ -12,7 +12,7 @@
 
     .contact-info {
       width: 50%;
-      margin-left: 360px;
+      margin-left: $main-padding;
 
       .uppercase {
         @include uppercase;
@@ -33,7 +33,7 @@
 
     .contact-form {
       width: 50%;
-      margin-right: 360px;
+      margin-right: $main-padding;
 
       background-color: blue;
     }
@@ -41,7 +41,7 @@
 
   .copyright {
     height: 63px;
-    margin: 56px 360px 0;
+    margin: 56px $main-padding 0;
 
     @include flex-space;
 
@@ -54,4 +54,28 @@
       @include secondary-text3;
     }
   }
+}
+
+@media screen and (max-width: $desktop-width){
+
+  .footer {
+
+    .contact-us {
+
+      .contact-info {
+        margin-left: 10%;
+      }
+
+      .contact-form {
+        margin-right: 10%;
+      }
+
+    }
+
+    .copyright {
+      margin: 56px 10% 0;
+    }
+
+  }
+
 }
