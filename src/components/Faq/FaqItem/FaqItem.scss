@@ -1,0 +1,58 @@
+@import "../../../assets/scss/style";
+
+.faq-item {
+
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+  h3 {
+    padding: 45px 200px 55px 100px;
+    color: $dark-blue;
+  }
+
+  p {
+    display: none;
+  }
+
+  .toggle {
+    background: url("../../../assets/media/plus.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    cursor: pointer;
+  }
+
+  &.active {
+
+    h3 {
+      padding: 72px 200px 0 100px;
+      color: $dark-blue;
+    }
+
+    p {
+      display: block;
+      padding: 22px 200px 60px 100px;
+      opacity: 0.6;
+      @include primary-text;
+      color: $dark-blue;
+    }
+
+    .toggle {
+      background: url("../../../assets/media/minus.svg") no-repeat center center;
+      width: 16px;
+      height: 16px;
+
+      position: absolute;
+      top: 85px;
+      right: 60px;
+      cursor: pointer;
+    }
+  }
+
+  &:first-of-type {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}

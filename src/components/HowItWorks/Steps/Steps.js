@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "./Steps.scss";
-import StepsItem from "../StepsItem/StepsItem";
+import StepsItem from "./StepsItem/StepsItem";
 
 class Steps extends Component {
 

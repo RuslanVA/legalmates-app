@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import postCase from "../../assets/media/post-case.png";
 import searchCase from "../../assets/media/search-case.png";
-import Steps from "../chunks/Steps/Steps";
+import Steps from "./Steps/Steps";
 import "./HowItWorks.scss";
 
 

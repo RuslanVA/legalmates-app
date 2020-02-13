@@ -22,6 +22,14 @@
   align-items: center;
 }
 
+@mixin primary-text {
+  font-family: "Work Sans Regular", sans-serif;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 195%;
+  letter-spacing: -0.03em;
+}
+
 @mixin secondary-text1 {
   font-family: "Work Sans Semibold", sans-serif;
   font-style: normal;

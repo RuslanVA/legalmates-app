@@ -3,6 +3,7 @@ import Header from "../chunks/Header/Header";
 import MainSlide from "../MainSlide/MainSlide";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import SignUp from "../SignUp/SignUp";
+import Faq from "../Faq/Faq";
 import Footer from "../chunks/Footer/Footer";
 
 
@@ -22,6 +23,7 @@ class HomePage extends Component {
                 <MainSlide/>
                 <HowItWorks/>
                 <SignUp/>
+                <Faq/>
                 <Footer/>
             </Fragment>
         );
