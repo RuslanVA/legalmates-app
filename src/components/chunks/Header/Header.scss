@@ -1,7 +1,7 @@
 @import "../../../assets/scss/style.scss";
 
 .header {
-  height: 93px;
+  height: 4.65rem;
   position: sticky;
 
   display: flex;
@@ -11,7 +11,7 @@
   background-color: $dark-blue;
 
   .logo {
-    margin-left: 60px;
+    margin-left: 3rem;
   }
 
 }

@@ -1,7 +1,7 @@
 @import "../../assets/scss/style.scss";
 
 .how-it-works {
-  margin-top: 62px;
+  margin-top: 3.1rem;
 
   h2 span {
     color: $gold;
@@ -9,27 +9,28 @@
 
   .how-post {
     position: relative;
-    min-height: 583px;
-    margin-top: 169px;
-    margin-left: $main-padding;
+    min-height: 23.8rem;
+    margin-top: 8.45rem;
+    @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
 
     .steps {
-      max-width: 32%;
-      margin-top: 30px;
+      max-width: 25.15rem;
+      margin-top: 1.5rem;
     }
 
     img {
       position: absolute;
-      top: -60px;
-      right: 20%;
+      top: -3rem;
+      right: 15.7rem;
+      @include fluid-right($mobile, $desktop, $mobile-margin, 314px);
       max-width: 43%;
     }
   }
 
   .how-search {
     position: relative;
-    min-height: 558px;
-    margin-top: 265px;
+    min-height: 27.9rem;
+    margin-top: 13.25rem;
 
     h2 {
       margin-left: 50%;
@@ -38,8 +39,8 @@
     }
 
     .steps {
-      max-width: 30%;
-      margin-top: 30px;
+      max-width: 27rem;
+      margin-top: 1.5rem;
       margin-left: 50%;
       position: relative;
       z-index: 10;
@@ -47,7 +48,7 @@
 
     img {
       position: absolute;
-      top: -122px;
+      top: -6.1rem;
       left: 0;
 
       max-width: 54%;
@@ -55,74 +56,78 @@
       @media screen and (max-width: 1900px){
         max-width: 50%;
       }
+
+      @media screen and (max-width: $laptop){
+        top: -2rem;
+      }
     }
 
   }
 
 }
 
-@media screen and (max-width: $desktop-width){
+//@media screen and (max-width: $laptop){
+//
+//  .how-it-works {
+//    margin-top: 1.5rem;
+//
+//    .how-post {
+//      min-height: 29.15rem;
+//      margin-top: 6rem;
+//      margin-left: $laptop-padding;
+//
+//      //.steps {
+//      //  max-width: 40%;
+//      //}
+//
+//      img {
+//        top: -3rem;
+//        right: $laptop-padding;
+//      }
+//    }
+//
+//    .how-search {
+//      min-height: 27.9rem;
+//      margin-top: 6rem;
+//
+//      h2 {
+//        margin-left: 50%;
+//      }
+//
+//      .steps {
+//        //max-width: 30%;
+//        margin-top: 1.5rem;
+//        margin-left: 50%;
+//      }
+//
+//      img {
+//        top: 0;
+//        left: 0;
+//
+//        max-width: 50%;
+//      }
+//
+//    }
+//
+//  }
+//}
 
-  .how-it-works {
-    margin-top: 30px;
-
-    .how-post {
-      min-height: 583px;
-      margin-top: 120px;
-      margin-left: 10%;
-
-      .steps {
-        max-width: 40%;
-      }
-
-      img {
-        top: -60px;
-        right: 10%;
-      }
-    }
-
-    .how-search {
-      min-height: 558px;
-      margin-top: 120px;
-
-      h2 {
-        margin-left: 50%;
-      }
-
-      .steps {
-        max-width: 30%;
-        margin-top: 30px;
-        margin-left: 50%;
-      }
-
-      img {
-        top: 0;
-        left: 0;
-
-        max-width: 50%;
-      }
-
-    }
-
-  }
-}
-
-@media screen and (max-width: $small-laptop-width){
-
-  .how-it-works {
-
-    .how-post {
-      margin-top: 60px;
-
-      img {
-        top: 0;
-      }
-    }
-
-    .how-search {
-      margin-top: 10px;
-
-    }
-  }
-
-}
+//@media screen and (max-width: $small-laptop-width){
+//
+//  .how-it-works {
+//
+//    .how-post {
+//      margin-top: 60px;
+//
+//      img {
+//        top: 0;
+//      }
+//    }
+//
+//    .how-search {
+//      margin-top: 10px;
+//
+//    }
+//  }
+//
+//}

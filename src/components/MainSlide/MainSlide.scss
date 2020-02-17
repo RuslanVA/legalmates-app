@@ -11,39 +11,31 @@
 
 .main-slide-info {
   position: absolute;
-  top: 26.88%;
-  left: $main-padding;
+  top: 10.35rem;
+  @include fluid-left($mobile, $desktop, $mobile-margin, $desktop-margin);
 
-  max-width: 32%;
+  max-width: calc(50% - 18.5rem);
 
   color: $white;
 
   p {
     @include primary-text;
-    margin-top: 27px;
+    margin-top: 1.35rem;
     color: $light-grey;
   }
 
   .btn {
-    margin-top: 30px;
+    margin-top: 1.5rem;
   }
 }
 
-@media screen and (max-width: $desktop-width){
+@media screen and (max-width: $laptop){
 
   .main-slide-info {
     top: 50%;
-    left: 10%;
     transform: translateY(-50%);
+
+    max-width: calc(50% - 13rem);
   }
 
-}
-
-@media screen and (max-width: $small-laptop-width){
-  .main-slide-info {
-    p {
-      font-size: 18px;
-      line-height: 155%;
-    }
-  }
 }

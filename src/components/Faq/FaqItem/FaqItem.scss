@@ -6,7 +6,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 
   h3 {
-    padding: 45px 200px 55px 100px;
+    padding: 2.25rem 10rem 2.75rem 5rem;
     color: $dark-blue;
   }
 
@@ -20,21 +20,21 @@
     height: 20px;
 
     position: absolute;
-    top: 50px;
-    right: 60px;
+    top: 2.5rem;
+    right: 3rem;
     cursor: pointer;
   }
 
   &.active {
 
     h3 {
-      padding: 72px 200px 0 100px;
+      padding: 3.6rem 10rem 0 5rem;
       color: $dark-blue;
     }
 
     p {
       display: block;
-      padding: 22px 200px 60px 100px;
+      padding: 1.1rem 10rem 3rem 5rem;
       opacity: 0.6;
       @include primary-text;
       color: $dark-blue;
@@ -46,8 +46,8 @@
       height: 16px;
 
       position: absolute;
-      top: 85px;
-      right: 60px;
+      top: 4.25rem;
+      right: 3rem;
       cursor: pointer;
     }
   }

@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @mixin zero-indents {
   margin: 0;
   padding: 0;
@@ -22,10 +24,138 @@
   align-items: center;
 }
 
+//responsive font-size
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+$min_width: 1024px;
+$max_width: 1920px;
+$min_font: 16px;
+$max_font: 20px;
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$min_left: 15px;
+$max_left: 360px;
+
+@mixin fluid-left($min-vw, $max-vw, $min-left, $max-left) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-left);
+  $u4: unit($max-left);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      left: $min-left;
+      @media screen and (min-width: $min-vw) {
+        left: calc(#{$min-left} + #{strip-unit($max-left - $min-left)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        left: $max-left;
+      }
+    }
+  }
+}
+
+$min_right: 15px;
+$max_right: 360px;
+
+
+@mixin fluid-right($min-vw, $max-vw, $min-right, $max-right) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-right);
+  $u4: unit($max-right);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      right: $min-right;
+      @media screen and (min-width: $min-vw) {
+        right: calc(#{$min-right} + #{strip-unit($max-right - $min-right)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        right: $max-right;
+      }
+    }
+  }
+}
+
+$min_left_margin: 15px;
+$max_left_margin: 360px;
+
+@mixin fluid-left-margin($min-vw, $max-vw, $min-left-margin, $max-left-margin) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-left-margin);
+  $u4: unit($max-left-margin);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      margin-left: $min-left-margin;
+      @media screen and (min-width: $min-vw) {
+        margin-left: calc(#{$min-left-margin} + #{strip-unit($max-left-margin - $min-left-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        margin-left: $max-left-margin;
+      }
+    }
+  }
+}
+
+$min_right_margin: 15px;
+$max_right_margin: 360px;
+
+@mixin fluid-right-margin($min-vw, $max-vw, $min-right-margin, $max-right-margin) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-right-margin);
+  $u4: unit($max-right-margin);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      margin-right: $min-right-margin;
+      @media screen and (min-width: $min-vw) {
+        margin-right: calc(#{$min-right-margin} + #{strip-unit($max-right-margin - $min-right-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        margin-right: $max-right-margin;
+      }
+    }
+  }
+}
+
 @mixin primary-text {
   font-family: "Work Sans Regular", sans-serif;
   font-style: normal;
-  font-size: 19px;
+  @include fluid-type($mobile, $desktop, 16px, 19px);
   line-height: 195%;
   letter-spacing: -0.03em;
 }
@@ -33,14 +163,14 @@
 @mixin secondary-text1 {
   font-family: "Work Sans Semibold", sans-serif;
   font-style: normal;
-  font-size: 15px;
+  @include fluid-type($mobile, $desktop, 14px, 15px);
   line-height: 155%;
 }
 
 @mixin secondary-text2 {
   font-family: "Work Sans Regular", sans-serif;
   font-style: normal;
-  font-size: 15px;
+  @include fluid-type($mobile, $desktop, 14px, 16px);
   line-height: 155%;
   letter-spacing: -0.03em;
 }
@@ -56,8 +186,9 @@
 @mixin uppercase {
   font-family: "Work Sans Bold", sans-serif;
   font-style: normal;
-  font-size: 16px;
+  @include fluid-type($mobile, $desktop, 12px, 16px);
   line-height: 120%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
+

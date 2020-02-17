@@ -1,10 +1,8 @@
-$large-desktop: 1920px;
-$desktop-width: 1600px;
-$laptop-width: 1370px;
-$small-laptop-width: 1320px;
-$tablet-pro-width: 1024px;
-$tablet-width: 768px;
-$mobile-width: 440px;
+$desktop: 1920px;
+$mobile: 1025px;
+
+$laptop: 1600px;
+$small-laptop: 1370px;
 
 $dark-blue: #0D2834;
 $white: #ffffff;
@@ -14,4 +12,17 @@ $dark-grey: #6E7F88;
 $grey: #B6BFC2;
 $light-grey: #E8ECEE;
 
-$main-padding: 18.75%;
+
+$large-desktop: 1920px;
+$desktop-width: 1600px;
+$laptop-width: 1370px;
+$small-laptop-width: 1320px;
+$tablet-pro-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 440px;
+
+$main-padding: 18rem;
+$laptop-padding: 9.6rem;
+
+$desktop-margin: 360px;
+$mobile-margin: 100px;

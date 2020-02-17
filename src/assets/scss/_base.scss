@@ -2,7 +2,8 @@
 @import "./mixins.scss";
 
 html {
-  font-size: 16px;
+  font-size: 20px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
 body {
@@ -48,28 +49,26 @@ h2, h3, h4, h5 {
   line-height: 115%;
 }
 
+
 h1 {
   font-family: "Work Sans Bold", sans-serif;
-  font-size: 60px;
+  @include fluid-type($mobile, $desktop, 28px, 60px);
 }
 
 h2 {
-  font-size: 44px;
+  @include fluid-type($mobile, $desktop, 22px, 44px);
 }
 
 h3 {
-  font-size: 28px;
+  @include fluid-type($mobile, $desktop, 18px, 28px);
 }
 
 h4, h5 {
-  font-size: 20px;
+  @include fluid-type($mobile, $desktop, 16px, 20px);
 }
 
 label {
-  font-family: "Work Sans Semibold", sans-serif;
-  font-style: normal;
-  font-size: 15px;
-  line-height: 155%;
+  @include secondary-text1;
 }
 
 a {
@@ -79,12 +78,7 @@ a {
 }
 
 p {
-  font-family: "Work Sans Regular", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 19px;
-  line-height: 195%;
-  letter-spacing: -0.03em;
+  @include primary-text;
 }
 
 ul {
@@ -111,33 +105,25 @@ input[type="submit"] {
 
 input::-ms-input-placeholder{
   color: $grey;
-  font-family: "Work Sans Regular", sans-serif;
-  font-size: 19px;
-  line-height: 195%;
+  @include primary-text;
 }
 input::-webkit-input-placeholder{
   color: $grey;
-  font-family: "Work Sans Regular", sans-serif;
-  font-size: 19px;
-  line-height: 195%;
+  @include primary-text;
 }
 input::-moz-placeholder{
   color: $grey;
-  font-family: "Work Sans Regular", sans-serif;
-  font-size: 19px;
-  line-height: 195%;
+  @include primary-text;
 }
 input::placeholder{
   color: $grey;
-  font-family: "Work Sans Regular", sans-serif;
-  font-size: 19px;
-  line-height: 195%;
+  @include primary-text;
 }
 
 button {
   font-family: "Work Sans Semibold", sans-serif;
   font-style: normal;
-  font-size: 15px;
+  @include fluid-type($mobile, $desktop, 14px, 15px);
   line-height: 155%;
   background-color: transparent;
   border: none;
@@ -146,22 +132,25 @@ button {
   @include zero-indents;
 }
 
-@media screen and (max-width: $small-laptop-width){
-
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  h4, h5 {
-    font-size: 20px;
-  }
-}
-
+//
+//@media screen and (max-width: $small-laptop-width){
+//
+//  h1 {
+//    font-size: 3rem;
+//  }
+//
+//
+//  h2 {
+//    font-size: 28px;
+//  }
+//
+//  h3 {
+//    font-size: 24px;
+//  }
+//
+//  h4, h5 {
+//    font-size: 20px;
+//  }
+//}
+//
+//

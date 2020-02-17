@@ -1,33 +1,35 @@
 @import "../../assets/scss/style";
 
 .faq {
-  padding: 116px $main-padding 110px;
+  padding: 5.8rem 0 5.5rem;
+  @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
+  @include fluid-right-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
 
   h2 {
-    margin-bottom: 59px;
+    margin-bottom: 3rem;
     text-align: center;
   }
 
 }
 
-@media screen and (max-width: $desktop-width){
-
-  .faq {
-    padding: 116px 10% 110px;
-  }
-
-}
-
-@media screen and (max-width: $small-laptop-width){
-
-  .faq {
-    padding: 60px 10% 60px;
-
-    h2 {
-      margin-bottom: 40px;
-    }
-
-
-  }
-
-}
+//@media screen and (max-width: $desktop-width){
+//
+//  .faq {
+//    padding: 116px 10% 110px;
+//  }
+//
+//}
+//
+//@media screen and (max-width: $small-laptop-width){
+//
+//  .faq {
+//    padding: 60px 10% 60px;
+//
+//    h2 {
+//      margin-bottom: 40px;
+//    }
+//
+//
+//  }
+//
+//}

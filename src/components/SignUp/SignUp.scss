@@ -2,7 +2,7 @@
 
 .sign-up {
   position: relative;
-  margin-top: 93px;
+  margin-top: 4.65rem;
 
   img {
     width: 100%;
@@ -12,32 +12,32 @@
 
 .sign-up-info {
   position: absolute;
-  top: 30.22%;
-  left: $main-padding;
+  top: 6.8rem;
+  @include fluid-left($mobile, $desktop, $mobile-margin, $desktop-margin);
 
-  max-width: 510px;
+  max-width: 25.5rem;
 
   color: $white;
 
   p {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     opacity: 0.7;
   }
 
   .btn {
-    margin-top: 30px;
+    margin-top: 1.5rem;
   }
 }
 
-@media screen and (max-width: $desktop-width){
+@media screen and (max-width: $laptop){
   .sign-up-info {
-    top: 20%;
-    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
-@media screen and (max-width: $small-laptop-width){
-  .sign-up {
-    margin-top: 0;
-  }
-}
+//@media screen and (max-width: $small-laptop-width){
+//  .sign-up {
+//    margin-top: 0;
+//  }
+//}

@@ -2,19 +2,19 @@
 
 .steps-item {
 
-  padding-top: 30px;
+  padding-top: 1.5rem;
   border-left: 4px solid rgba(29, 66, 84, 0.1);
   cursor: pointer;
 
   h4 {
-    padding-left: 40px;
+    padding-left: 2rem;
 
     color: $light-grey;
 
   }
 
   h3 {
-    padding: 5px 0 10px 40px;
+    padding: 0.25rem 0 0.5rem 2rem;
     color: $grey;
   }
 
@@ -24,7 +24,7 @@
 
   &.active {
 
-    padding-top: 30px;
+    padding-top: 1.5rem;
     border-left: 4px solid $gold;
 
     h4 {
@@ -37,13 +37,13 @@
 
     p {
       display: block;
-      padding: 8px 0 5px 40px;
+      padding: 0.4rem 0 0.25rem 2rem;
       opacity: 0.7;
       @include secondary-text1;
     }
   }
 
   &:first-of-type {
-    padding-top: 10px;
+    padding-top: 0.5rem;
   }
 }

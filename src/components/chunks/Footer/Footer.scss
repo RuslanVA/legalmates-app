@@ -1,18 +1,19 @@
 @import "../../../assets/scss/style.scss";
 
 .footer {
-  background: url("../../../assets/media/footer-background.jpg");
+  background: url("../../../assets/media/footer-background.jpg") no-repeat;
+  background-size: cover;
   width: 100%;
 
   color: $white;
 
   .contact-us {
     display: flex;
-    padding-top: 79px;
+    padding-top: 4rem;
 
     .contact-info {
       width: 50%;
-      margin-left: $main-padding;
+      @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
 
       .uppercase {
         @include uppercase;
@@ -20,11 +21,11 @@
       }
 
       .title {
-        margin-top: 30px;
+        margin-top: 1.5rem;
       }
 
       .text {
-        margin-top: 20px;
+        margin-top: 1rem;
         max-width: 66%;
 
         color: #BCC1CE;
@@ -33,15 +34,17 @@
 
     .contact-form {
       width: 50%;
-      margin-right: $main-padding;
+      @include fluid-right-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
 
       background-color: blue;
     }
   }
 
   .copyright {
-    height: 63px;
-    margin: 56px $main-padding 0;
+    height: 3.15rem;
+    margin-top: 2.8rem;
+    @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
+    @include fluid-right-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
 
     @include flex-space;
 
@@ -56,26 +59,26 @@
   }
 }
 
-@media screen and (max-width: $desktop-width){
-
-  .footer {
-
-    .contact-us {
-
-      .contact-info {
-        margin-left: 10%;
-      }
-
-      .contact-form {
-        margin-right: 10%;
-      }
-
-    }
-
-    .copyright {
-      margin: 56px 10% 0;
-    }
-
-  }
-
-}
+//@media screen and (max-width: $desktop-width){
+//
+//  .footer {
+//
+//    .contact-us {
+//
+//      .contact-info {
+//        margin-left: 10%;
+//      }
+//
+//      .contact-form {
+//        margin-right: 10%;
+//      }
+//
+//    }
+//
+//    .copyright {
+//      margin: 56px 10% 0;
+//    }
+//
+//  }
+//
+//}
