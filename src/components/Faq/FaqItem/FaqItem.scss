@@ -56,3 +56,63 @@
     border-top: 1px solid rgba(0, 0, 0, 0.12);
   }
 }
+
+
+@media screen and (max-width: $tablet) {
+
+  .faq-item {
+
+    h3 {
+      padding: 1.25rem 0 1.25rem;
+      max-width: 90%;
+    }
+
+    .toggle {
+      width: 28px;
+      height: 28px;
+
+      top: 1.3rem;
+      right: 0;
+    }
+
+    &.active {
+
+      h3 {
+        padding: 1.25rem 0 0;
+      }
+
+      p {
+        padding: 1.25rem 0 1.875rem;
+      }
+
+      .toggle {
+        width: 24px;
+        height: 24px;
+
+        top: 1.3rem;
+        right: 0;
+      }
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .faq-item {
+
+    .toggle {
+      top: 1.8125rem;
+    }
+
+    &.active {
+      .toggle {
+        top: 1.8125rem;
+      }
+    }
+
+  }
+
+}

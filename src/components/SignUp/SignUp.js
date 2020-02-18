@@ -8,8 +8,7 @@ class SignUp extends Component {
     render() {
         return (
             <div className="sign-up">
-                <img src={slide} alt="Ready to get started?"/>
-                <div className="sign-up-info">
+                <div className="sign-up__info">
                     <h2>
                         Ready to get started?
                     </h2>
@@ -18,6 +17,7 @@ class SignUp extends Component {
                     </p>
                     <Button label="Try Now"/>
                 </div>
+                <img src={slide} alt="Ready to get started?"/>
             </div>
         );
     }

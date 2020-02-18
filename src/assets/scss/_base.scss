@@ -5,8 +5,13 @@ html {
   font-size: 20px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
+//
+//@media screen and (max-width: $tablet) {
+//  @include fluid-type($mobile, $tablet, $min_font, $max_font);
+//}
 
 body {
+  overflow-x: hidden;
   min-width: 320px;
   margin: 0;
   padding: 0;

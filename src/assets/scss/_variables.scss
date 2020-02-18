@@ -1,5 +1,9 @@
 $desktop: 1920px;
-$mobile: 1025px;
+$tablet: 1025px;
+$mobile: 320px;
+
+$tablet-small: 769px;
+$mobile-big: 480px;
 
 $laptop: 1600px;
 $small-laptop: 1370px;
@@ -25,4 +29,5 @@ $main-padding: 18rem;
 $laptop-padding: 9.6rem;
 
 $desktop-margin: 360px;
-$mobile-margin: 100px;
+$tablet-margin: 100px;
+$mobile-margin: 15px;

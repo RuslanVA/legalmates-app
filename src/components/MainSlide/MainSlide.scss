@@ -7,35 +7,67 @@
     width: 100%;
   }
 
-}
+  &__info {
+    position: absolute;
+    top: 10.35rem;
+    @include fluid-left($tablet, $desktop, $tablet-margin, $desktop-margin);
 
-.main-slide-info {
-  position: absolute;
-  top: 10.35rem;
-  @include fluid-left($mobile, $desktop, $mobile-margin, $desktop-margin);
+    max-width: calc(50% - 18.5rem);
 
-  max-width: calc(50% - 18.5rem);
+    color: $white;
 
-  color: $white;
+    p {
+      @include primary-text;
+      margin-top: 1.35rem;
+      color: $light-grey;
+    }
 
-  p {
-    @include primary-text;
-    margin-top: 1.35rem;
-    color: $light-grey;
+    .btn {
+      margin-top: 1.5rem;
+    }
   }
 
-  .btn {
-    margin-top: 1.5rem;
-  }
 }
 
 @media screen and (max-width: $laptop){
 
-  .main-slide-info {
-    top: 50%;
-    transform: translateY(-50%);
+  .main-slide {
+    &__info {
+      top: 50%;
+      transform: translateY(-50%);
 
-    max-width: calc(50% - 13rem);
+      max-width: calc(50% - 13rem);
+    }
+  }
+
+}
+
+@media screen and (max-width: $tablet) {
+
+  .main-slide {
+    overflow-x: hidden;
+
+    padding-bottom: 2.5rem;
+    background-color: #070B13;
+
+    img {
+      object-fit: fill;
+      transform: scale(2);
+      @include fluid-position($mobile, $tablet, -70px, -250px);
+
+      margin-top: 8vw;
+    }
+
+    &__info {
+      position: static;
+      max-width: 100%;
+      transform: translateY(0);
+      margin-top: 15vw;
+
+      @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+      @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+
+    }
   }
 
 }

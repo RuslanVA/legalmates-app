@@ -52,15 +52,15 @@ class HowItWorks extends Component {
         ];
 
         return (
-            <div className="how-it-works">
-                <div className="how-post">
+            <div className="hiw">
+                <div className="hiw__post">
                     <h2>
                         I want to <span>refer a case</span>
                     </h2>
                     <img src={postCase} alt="I want to refer a case"/>
                     <Steps data={data1} />
                 </div>
-                <div className="how-search">
+                <div className="hiw__search">
                     <h2>
                         I want to <span>get a referral</span>
                     </h2>

@@ -9,7 +9,7 @@ class MainSlide extends Component {
         return (
             <div className="main-slide">
                 <img src={slide} alt="Legal Mates"/>
-                <div className="main-slide-info">
+                <div className="main-slide__info">
                     <h1>
                         Simplifying Case Referral
                     </h1>

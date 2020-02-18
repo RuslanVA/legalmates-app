@@ -2,8 +2,8 @@
 
 .faq {
   padding: 5.8rem 0 5.5rem;
-  @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
-  @include fluid-right-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
+  @include fluid-left-margin($tablet, $desktop, $tablet-margin, $desktop-margin);
+  @include fluid-right-margin($tablet, $desktop, $tablet-margin, $desktop-margin);
 
   h2 {
     margin-bottom: 3rem;
@@ -12,24 +12,15 @@
 
 }
 
-//@media screen and (max-width: $desktop-width){
-//
-//  .faq {
-//    padding: 116px 10% 110px;
-//  }
-//
-//}
-//
-//@media screen and (max-width: $small-laptop-width){
-//
-//  .faq {
-//    padding: 60px 10% 60px;
-//
-//    h2 {
-//      margin-bottom: 40px;
-//    }
-//
-//
-//  }
-//
-//}
+@media screen and (max-width: $tablet) {
+  .faq {
+    padding: 3.125rem 0 5rem;
+    @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+    @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+
+    h2 {
+      margin-bottom: 1.875rem;
+    }
+
+  }
+}

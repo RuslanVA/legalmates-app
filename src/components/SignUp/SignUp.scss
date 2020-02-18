@@ -8,36 +8,69 @@
     width: 100%;
   }
 
-}
+  &__info {
+    position: absolute;
+    top: 6.8rem;
+    @include fluid-left($tablet, $desktop, $tablet-margin, $desktop-margin);
 
-.sign-up-info {
-  position: absolute;
-  top: 6.8rem;
-  @include fluid-left($mobile, $desktop, $mobile-margin, $desktop-margin);
+    max-width: 25.5rem;
 
-  max-width: 25.5rem;
+    color: $white;
 
-  color: $white;
+    p {
+      margin-top: 0.5rem;
+      opacity: 0.7;
+    }
 
-  p {
-    margin-top: 0.5rem;
-    opacity: 0.7;
+    .btn {
+      margin-top: 1.5rem;
+    }
   }
 
-  .btn {
-    margin-top: 1.5rem;
-  }
 }
 
 @media screen and (max-width: $laptop){
-  .sign-up-info {
-    top: 50%;
-    transform: translateY(-50%);
+  .sign-up {
+    &__info {
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
 
-//@media screen and (max-width: $small-laptop-width){
-//  .sign-up {
-//    margin-top: 0;
-//  }
-//}
+@media screen and (max-width: $tablet) {
+
+  .sign-up {
+    margin-top: 3.75rem;
+    overflow-x: hidden;
+    background-color: #02111E;
+
+    &__info {
+      position: static;
+      max-width: 100%;
+      transform: translateY(0);
+
+      @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+      @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+
+      h2 {
+        padding-top: 3.75rem;
+      }
+
+      p {
+        margin-top: 1.875rem;
+      }
+
+      .btn {
+        margin-top: 1.875rem;
+        margin-bottom: 3.1875rem;
+      }
+    }
+
+    img {
+        display: none;
+    }
+
+  }
+
+}

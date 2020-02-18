@@ -13,7 +13,7 @@
 
     .contact-info {
       width: 50%;
-      @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
+      @include fluid-left-margin($tablet, $desktop, $tablet-margin, $desktop-margin);
 
       .uppercase {
         @include uppercase;
@@ -34,7 +34,7 @@
 
     .contact-form {
       width: 50%;
-      @include fluid-right-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
+      @include fluid-right-margin($tablet, $desktop, $tablet-margin, $desktop-margin);
 
       background-color: blue;
     }
@@ -43,8 +43,8 @@
   .copyright {
     height: 3.15rem;
     margin-top: 2.8rem;
-    @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
-    @include fluid-right-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
+    @include fluid-left-margin($tablet, $desktop, $tablet-margin, $desktop-margin);
+    @include fluid-right-margin($tablet, $desktop, $tablet-margin, $desktop-margin);
 
     @include flex-space;
 
@@ -59,26 +59,62 @@
   }
 }
 
-//@media screen and (max-width: $desktop-width){
-//
-//  .footer {
-//
-//    .contact-us {
-//
-//      .contact-info {
-//        margin-left: 10%;
-//      }
-//
-//      .contact-form {
-//        margin-right: 10%;
-//      }
-//
-//    }
-//
-//    .copyright {
-//      margin: 56px 10% 0;
-//    }
-//
-//  }
-//
-//}
+
+@media screen and (max-width: $tablet) {
+
+  .footer {
+
+    .contact-us {
+      flex-wrap: wrap;
+      padding-top: 2.5rem;
+
+      .contact-info {
+        width: 100%;
+        @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+        @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+
+        .title {
+          margin-top: 1.8125rem;
+          font-size: 32px;
+        }
+
+        .text {
+          margin-top: 1.4375rem;
+          max-width: 100%;
+
+          color: $white;
+        }
+      }
+
+      .contact-form {
+        width: 100%;
+        @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+        @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+      }
+    }
+
+    .copyright {
+      height: auto;
+      margin-top: 2.8rem;
+      padding-top: 0.6875rem;
+      padding-bottom: 0.8125rem;
+      @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+      @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .logo {
+        width: 100px;
+        height: 23px;
+      }
+
+      p {
+        margin-top: 0.4rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+}

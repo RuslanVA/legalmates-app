@@ -1,17 +1,17 @@
 @import "../../assets/scss/style.scss";
 
-.how-it-works {
+.hiw {
   margin-top: 3.1rem;
 
   h2 span {
     color: $gold;
   }
 
-  .how-post {
+  .hiw__post {
     position: relative;
     min-height: 23.8rem;
     margin-top: 8.45rem;
-    @include fluid-left-margin($mobile, $desktop, $mobile-margin, $desktop-margin);
+    @include fluid-left-margin($tablet, $desktop, $tablet-margin, $desktop-margin);
 
     .steps {
       max-width: 25.15rem;
@@ -22,12 +22,12 @@
       position: absolute;
       top: -3rem;
       right: 15.7rem;
-      @include fluid-right($mobile, $desktop, $mobile-margin, 314px);
+      @include fluid-right($tablet, $desktop, $tablet-margin, 314px);
       max-width: 43%;
     }
   }
 
-  .how-search {
+  .hiw__search {
     position: relative;
     min-height: 27.9rem;
     margin-top: 13.25rem;
@@ -66,68 +66,57 @@
 
 }
 
-//@media screen and (max-width: $laptop){
-//
-//  .how-it-works {
-//    margin-top: 1.5rem;
-//
-//    .how-post {
-//      min-height: 29.15rem;
-//      margin-top: 6rem;
-//      margin-left: $laptop-padding;
-//
-//      //.steps {
-//      //  max-width: 40%;
-//      //}
-//
-//      img {
-//        top: -3rem;
-//        right: $laptop-padding;
-//      }
-//    }
-//
-//    .how-search {
-//      min-height: 27.9rem;
-//      margin-top: 6rem;
-//
-//      h2 {
-//        margin-left: 50%;
-//      }
-//
-//      .steps {
-//        //max-width: 30%;
-//        margin-top: 1.5rem;
-//        margin-left: 50%;
-//      }
-//
-//      img {
-//        top: 0;
-//        left: 0;
-//
-//        max-width: 50%;
-//      }
-//
-//    }
-//
-//  }
-//}
+@media screen and (max-width: $tablet) {
 
-//@media screen and (max-width: $small-laptop-width){
-//
-//  .how-it-works {
-//
-//    .how-post {
-//      margin-top: 60px;
-//
-//      img {
-//        top: 0;
-//      }
-//    }
-//
-//    .how-search {
-//      margin-top: 10px;
-//
-//    }
-//  }
-//
-//}
+  .hiw {
+    margin-top: 0;
+
+    .hiw__post {
+      min-height: auto;
+      margin-top: 10.9vw;
+
+      @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+      @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+
+      .steps {
+        max-width: 100%;
+        margin-top: 2rem;
+      }
+
+      img {
+        position: static;
+        max-width: 100%;
+
+        @include fluid-left-margin($mobile, $tablet, 1px, $tablet-margin);
+        @include fluid-right-margin($mobile, $tablet, 1px, $tablet-margin);
+      }
+    }
+
+    .hiw__search {
+      min-height: auto;
+      margin-top: 18.75vw;
+
+      @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+      @include fluid-right-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+
+      h2 {
+        margin-left: 0;
+      }
+
+      .steps {
+        max-width: 100%;
+        margin-top: 2rem;
+        margin-left: 0;
+      }
+
+      img {
+        position: static;
+        max-width: 110%;
+        margin-top: 0.8rem;
+      }
+
+    }
+
+  }
+
+}

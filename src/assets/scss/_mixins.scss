@@ -55,6 +55,27 @@ $max_font: 20px;
   }
 }
 
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
 $min_left: 15px;
 $max_left: 360px;
 
@@ -147,6 +168,27 @@ $max_right_margin: 360px;
 
       @media screen and (min-width: $max-vw) {
         margin-right: $max-right-margin;
+      }
+    }
+  }
+}
+
+@mixin fluid-position($min-vw, $max-vw, $min-transition, $max-transition) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-transition);
+  $u4: unit($max-transition);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      object-position: $min-transition;
+      @media screen and (min-width: $min-vw) {
+        object-position: calc(#{$min-transition} + #{strip-unit($max-transition - $min-transition)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        object-position: $max-transition;
       }
     }
   }
