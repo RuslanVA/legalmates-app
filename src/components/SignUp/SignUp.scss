@@ -42,7 +42,7 @@
 
   .sign-up {
     margin-top: 3.75rem;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #02111E;
 
     &__info {
@@ -68,7 +68,11 @@
     }
 
     img {
-        display: none;
+      object-fit: fill;
+      transform: scale(3.1) translateY(35%);
+      @include fluid-position($mobile, $tablet, -96px, -310px);
+
+      margin-bottom: 49vw;
     }
 
   }
