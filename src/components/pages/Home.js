@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import Header from "../chunks/Header/Header";
 import MainSlide from "../MainSlide/MainSlide";
 import HowItWorks from "../HowItWorks/HowItWorks";
@@ -18,14 +18,14 @@ class HomePage extends Component {
 
     render(){
         return (
-            <Fragment>
+            <div className="home-page">
                 <Header/>
                 <MainSlide/>
                 <HowItWorks/>
                 <SignUp/>
                 <Faq/>
                 <Footer/>
-            </Fragment>
+            </div>
         );
     }
 }

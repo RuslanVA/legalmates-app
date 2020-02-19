@@ -2,28 +2,25 @@ import React, {Component} from "react";
 import Logo from "../Logo/Logo";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import Navigation from "../Navigation/Navigation";
+import MenuButton from "../MenuButton/MenuButton";
 import './Header.scss';
 
 class Header extends Component {
 
-    state = {
-        status: false
-    };
-
-    handleClick= () => {
-        if (!this.state.status) {
-            document.addEventListener('click', this.handleOutsideClick, false);
-        } else {
-            document.removeEventListener('click', this.handleOutsideClick, false);
+    constructor(props){
+        super(props);
+        this.state={
+            menuOpen:false
         }
-        this.setState(prevState => ({
-            status: !prevState.status,
-        }));
-    };
+    }
 
-    handleOutsideClick = () => {
-        this.handleClick();
-    };
+    handleMenuClick() {
+        this.setState({menuOpen:!this.state.menuOpen});
+    }
+
+    handleLinkClick() {
+        this.setState({menuOpen: false});
+    }
 
     render() {
         return (
@@ -33,17 +30,11 @@ class Header extends Component {
                 </div>
 
                 <div className="header-right">
-                    <Navigation className=""/>
-                    <div className={this.state.status ? "dropdown active" : "dropdown"}
-                        onClick={this.handleClick}>
-                        {
-                            this.state.status ? <DropdownMenu/> : null
-                        }
+                    <Navigation/>
+                    <div className={this.state.menuOpen ? "dropdown active" : "dropdown hidden"}>
+                        <DropdownMenu/>
                     </div>
-                    <div className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        </a>
-                    </div>
+                    <MenuButton open={this.state.menuOpen} onClick={()=>this.handleMenuClick()}/>
                 </div>
             </div>
         );

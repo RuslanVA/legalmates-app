@@ -2,7 +2,10 @@
 
 .header {
   height: 4.65rem;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -12,18 +15,45 @@
 
   z-index: 100;
 
+  .header-right {
+    position: relative;
+  }
+
   .logo {
     margin-left: 3rem;
   }
 
 }
 
+.home-page {
+  .header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .home-page {
+    .header {
+      background-color: #080E19;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .header {
     height: 2.65rem;
+    background-color: #080E19;
 
     .logo {
-      @include fluid-left-margin($mobile, $tablet, $mobile-margin, $tablet-margin);
+      margin-left: 15px;
     }
 
     .logo img{
